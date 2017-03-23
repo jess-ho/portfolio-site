@@ -1,0 +1,89 @@
+@import 'partials/setup';
+@import 'partials/global';
+
+header {
+	height: 100vh;
+	background: gray;
+}
+
+nav {
+	padding: 30px;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+.main__landing {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 100%;
+}
+
+.about__repertoire {
+	padding: 40px;
+	background: gray;
+
+	h2 {
+		margin: 0;
+	}
+}
+
+.about__repertoire-list {
+	display: flex;
+	justify-content: space-around;
+
+	p {
+		margin: 0;
+	}
+	
+	img {
+		width: 100px;
+	}
+}
+
+.portfolio {
+	padding: 30px;
+}
+
+.portfolio-pieces {
+	display: flex;
+	justify-content: space-around;
+}
+
+.portfolio-pieces__piece {
+	background: gray;
+}
+
+footer {
+	position: relative;
+	background: gray;
+	padding: 50px;
+
+	p {
+		margin: 0;
+	}
+}
+
+.tothetop {
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	background: gray;
+	padding: 5px 10px 0;
+	font-size: 18px;
+}
+
+.social {
+	padding: 20px 0 30px;
+
+	a {
+		margin: 0 30px;
+		font-size: 20px;
+	}
+}
