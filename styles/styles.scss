@@ -1,9 +1,20 @@
 @import 'partials/setup';
 @import 'partials/global';
 
+.outer-wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
+
 header {
 	height: 100vh;
-	background: gray;
+	background-color: $bg;
+	background-image: url('../assets/asanoha-400px.png');
+	color: black;
+
+	.wrapper {
+		height: 50%;
+	}
 }
 
 nav {
@@ -12,37 +23,181 @@ nav {
 
 nav ul {
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-end;
+}
+
+nav li {
+	margin: 0 20px 0 100px;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+nav a {
+	position: relative;
+	transition: all .3s ease;
+	color: $accent;
+}
+
+nav a::before {
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	right: 0;
+	height: 2px;
+	width: 100%;
+	transform: scaleX(0);
+	background: $accent;
+	transition: all .3s ease;
+}
+
+nav a:hover {
+	color: $hover;
+}
+
+nav a:hover::before {
+	transform: scaleX(1);
+}
+
+section {
+	padding-top: 50px;
 }
 
 .main__landing {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translateY(-50%);
+	position: relative;
+	text-align: center;
+	font-size: 22px;
+	color: $font;
 
-	width: 100%;
+	width: 55%;
+	// max-width: 800px;
+	margin: 0 auto;
+	padding: 50px 0;
+	background: rgba(255,255,255,0.5);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -20px;
+		bottom: -20px;
+		right: -20px;
+		left: -20px;
+		border: 3px solid white;
+	}
+
+	p {
+		margin: 0 0 20px;
+		letter-spacing: 4px;
+		// text-transform: uppercase;
+	}
+}
+
+h1 {
+	font-size: 65px;
+	color: $bright;
+	margin: 0;
+	letter-spacing: 5px;
+	text-transform: lowercase;	
+}
+
+.greeting {
+	display: block;
+	font-size: 31px;
+	text-transform: lowercase;
+}
+
+.about {
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+	flex-wrap: wrap;
+	color: $font;
+	padding: 0 30px;
+
+	div {
+		width: 45%;
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	h2 {
+		text-align: left;
+	}
+
+	p {
+		line-height: 28px;
+	}
+}
+
+blockquote {
+	margin-bottom: 40px;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -20px;
+		left: -20px;
+		height: 20px;
+		width: 20px;
+		border-top: 2px solid $bright;
+		border-left: 2px solid $bright;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -20px;
+		right: -20px;
+		height: 20px;
+		width: 20px;
+		border-bottom: 2px solid $bright;
+		border-right: 2px solid $bright;
+	}
+}
+
+.jk {
+	text-decoration: line-through;
+	color: gray;
 }
 
 .about__repertoire {
+	margin-top: 50px;
 	padding: 40px;
-	background: gray;
-
-	h2 {
-		margin: 0;
-	}
+	background-color: $bg;
+	background-image: url('../assets/asanoha-400px.png');
+	color: $font;
 }
 
 .about__repertoire-list {
+	text-align: center;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	
+	margin: 0 auto;
+	padding: 0 200px;
 
 	p {
 		margin: 0;
+		font-size: 17px;
+		color: $white;
 	}
 	
 	img {
-		width: 100px;
+		width: 60px;
+	}
+
+	div {
+		width: calc(20% - 20px);
+		margin: 45px 10px;
 	}
 }
 
@@ -50,19 +205,131 @@ nav ul {
 	padding: 30px;
 }
 
-.portfolio-pieces {
-	display: flex;
-	justify-content: space-around;
+.portfolio-pieces__piece-img {
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		display: block;
+	}
 }
 
 .portfolio-pieces__piece {
-	background: gray;
+	position: relative;
+	padding: 40px 0;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 10px;
+		right: 10px;
+		height: 2px;
+		bottom: 0;
+		background: $bg;
+	}
+}
+
+.portfolio-pieces__piece-skills {
+	text-transform: uppercase;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	font-size: 18px;
+	letter-spacing: 1px;
+
+	ul {
+		width: 100%;
+	}
+
+	li {
+		margin: 0 10px;
+	}
+}
+
+.details {
+	position: relative;
+
+	p {
+		text-align: center;
+		padding: 15px 20px;
+		line-height: 28px;
+	}
+}
+
+h3 {
+	letter-spacing: 2px;
+	font-size: 23px;
+	margin: 0;
+	margin-left: 20px;
+	transform: translateY(-50%);
+	padding: 5px 20px;
+	background: $black;
+	display: inline-block;
+	color: $white;
+	text-transform: uppercase;
+	text-align: left;
+	position: relative;
+}
+
+.external {
+	color: $bright;
+	text-decoration: underline;
+	transition: all .2s ease;
+}
+
+.external:hover {
+	color: $hover;
+}
+
+.portfolio-pieces__piece-link {
+	display: inline-block;
+	position: relative;
+	color: $white;
+	background: $bright;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin-top: 20px;
+	margin-left: 20px;
+	transition: all .3s ease;
+
+	&:hover {
+		background: $white;
+		color: $bright;
+		box-shadow: inset 0 0 0 2px $bright;
+	}
+}
+
+.button-container {
+	padding: 60px 0 20px;
+	text-align: center;
+
+	button {
+		background: white;
+		border: none;
+		color: $bright;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 2px;
+		font-size: 20px;
+		border: 2px solid $bright;
+		padding: 10px 15px;
+		transition: all .3s ease;
+
+		&:hover {
+			color: $white;
+			background: $bright;
+		}
+	}
 }
 
 footer {
 	position: relative;
-	background: gray;
+	background-color: $bg;
+	background-image: url('../assets/asanoha-400px.png');
 	padding: 50px;
+	text-align: center;
 
 	p {
 		margin: 0;
@@ -71,12 +338,14 @@ footer {
 
 .tothetop {
 	position: absolute;
-	bottom: 100%;
+	top: 10px;
 	left: 50%;
 	transform: translateX(-50%);
-	background: gray;
-	padding: 5px 10px 0;
-	font-size: 18px;
+	font-size: 22px;
+
+	a {
+		color: $white;
+	}
 }
 
 .social {
@@ -84,6 +353,14 @@ footer {
 
 	a {
 		margin: 0 30px;
-		font-size: 20px;
+		font-size: 25px;
+		transition: all .3s ease;
+		color: $accent;
+
+		&:hover {
+			color: $hover;
+		}
 	}
 }
+
+@import 'partials/media';
