@@ -199,7 +199,7 @@ header {
   background: rgba(0, 0, 0, 0.9); }
 
 nav {
-  padding-top: 60px;
+  padding-top: 50px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;
@@ -268,6 +268,64 @@ h1 {
   margin: 0;
   letter-spacing: 5px;
   text-transform: uppercase; }
+
+footer {
+  position: relative;
+  background-color: #9F9797;
+  background-image: url("../assets/asanoha-400px.png");
+  padding: 40px;
+  text-align: center; }
+  footer p {
+    margin: 0;
+    font-size: 14px; }
+
+.tothetop {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px; }
+  .tothetop:hover {
+    animation: jumptop .5s ease; }
+  .tothetop a {
+    color: #FFF; }
+
+@keyframes jumptop {
+  0% {
+    top: 12px; }
+  40% {
+    top: 2px; }
+  50% {
+    top: 10px; }
+  90% {
+    top: 2px; }
+  100% {
+    top: 10px; } }
+
+.social {
+  padding: 20px 0 30px;
+  margin: 20px auto; }
+  .social p {
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #FCD2C7; }
+
+.media {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .media a {
+    margin: 0 30px;
+    font-size: 25px;
+    line-height: 44px;
+    transition: all .3s ease;
+    color: #FCD2C7; }
+    .media a:hover {
+      color: #E9B493; }
 
 .about {
   display: -ms-flexbox;
@@ -424,50 +482,6 @@ h3 {
     background: #FFF;
     color: #7CB4C1;
     box-shadow: inset 0 0 0 2px #7CB4C1; }
-
-footer {
-  position: relative;
-  background-color: #9F9797;
-  background-image: url("../assets/asanoha-400px.png");
-  padding: 40px;
-  text-align: center; }
-  footer p {
-    margin: 0;
-    font-size: 14px; }
-
-.tothetop {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 22px; }
-  .tothetop a {
-    color: #FFF; }
-
-.social {
-  padding: 20px 0 30px;
-  margin: 20px auto; }
-  .social p {
-    letter-spacing: 1px;
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #FCD2C7; }
-
-.media {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: center;
-      justify-content: center; }
-  .media a {
-    margin: 0 30px;
-    font-size: 25px;
-    line-height: 44px;
-    transition: all .3s ease;
-    color: #FCD2C7; }
-    .media a:hover {
-      color: #E9B493; }
 
 @media all and (max-width: 1080px) {
   .about__repertoire-list {

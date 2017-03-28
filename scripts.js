@@ -45,12 +45,22 @@ $(function() {
 	})
 
 	$('.fa-times').on('click', function() {
-		$('nav ul').css('top', '-100%').removeClass('bg-overlay')
 		$('.hidden-menu').fadeIn()
+		$('nav ul').css('top', '-100%').removeClass('bg-overlay')
 		$('.fa-times').fadeOut()
 	})
 
-	//
+	$(window).on('resize', function() {
+		if ($(window).width() < 650) {
+			$('.hidden-menu').show()
+		} else {
+			$('.hidden-menu').hide()
+		}
+	})
 
-
+	if ($(window).width() < 650) {
+		$('.hidden-menu').fadeIn()
+	} else {
+		$('.hidden-menu').fadeOut()
+	}
 });
