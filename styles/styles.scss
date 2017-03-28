@@ -1,24 +1,52 @@
 @import 'partials/setup';
 @import 'partials/global';
 
-.outer-wrapper {
-	width: 90%;
-	margin: 0 auto;
-}
-
 header {
 	height: 100vh;
 	background-color: $bg;
 	background-image: url('../assets/asanoha-400px.png');
-	color: black;
+	color: $black;
+	position: relative;
 
 	.wrapper {
 		height: 50%;
 	}
 }
 
+.logo {
+	width: 600px;
+	height: 600px;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -52%);
+}
+
+.hidden-menu {
+	display: none;
+	margin-top: 30px;
+}
+
+.fa-times {
+	display: none;
+}
+
+.fa-times, .fa-bars {
+	color: $white;
+	font-size: 24px;
+	cursor: pointer;
+
+}
+
+.bg-overlay {
+	background: rgba(0,0,0,0.9);
+}
+
 nav {
-	padding: 30px;
+	padding-top: 60px;
+	display: flex;
+	justify-content: flex-end;
 }
 
 nav ul {
@@ -60,19 +88,13 @@ nav a:hover::before {
 	transform: scaleX(1);
 }
 
-section {
-	padding-top: 50px;
-}
-
 .main__landing {
 	transform: translateY(-50%);
 	position: relative;
 	text-align: center;
 	font-size: 22px;
 	color: $font;
-
-	width: 55%;
-	// max-width: 800px;
+	width: 60%;
 	margin: 0 auto;
 	padding: 50px 0;
 	background: rgba(255,255,255,0.5);
@@ -90,7 +112,6 @@ section {
 	p {
 		margin: 0 0 20px;
 		letter-spacing: 4px;
-		// text-transform: uppercase;
 	}
 }
 
@@ -99,30 +120,20 @@ h1 {
 	color: $bright;
 	margin: 0;
 	letter-spacing: 5px;
-	text-transform: lowercase;	
-}
-
-.greeting {
-	display: block;
-	font-size: 31px;
-	text-transform: lowercase;
+	text-transform: uppercase;	
 }
 
 .about {
 	display: flex;
 	justify-content: space-between;
 	text-align: left;
-	flex-wrap: wrap;
 	color: $font;
 	padding: 0 30px;
+	position: relative;
+	z-index: 2;
 
 	div {
 		width: 45%;
-
-		img {
-			display: block;
-			width: 100%;
-		}
 	}
 
 	h2 {
@@ -134,28 +145,38 @@ h1 {
 	}
 }
 
+.originalpic {
+	display: block;
+	width: 100%;
+}
+
+.minpic {
+	display: none;
+}
+
 blockquote {
-	margin-bottom: 40px;
+	margin: 0 20px 40px;
+	padding-left: 20px;
+	padding-right: 10px;
 	position: relative;
 
-	&::before {
+	&::before, &::after {
 		content: '';
 		position: absolute;
-		top: -20px;
-		left: -20px;
 		height: 20px;
 		width: 20px;
+	}
+
+	&::before {
+		top: -20px;
+		left: -20px;
 		border-top: 2px solid $bright;
 		border-left: 2px solid $bright;
 	}
 
 	&::after {
-		content: '';
-		position: absolute;
 		bottom: -20px;
 		right: -20px;
-		height: 20px;
-		width: 20px;
 		border-bottom: 2px solid $bright;
 		border-right: 2px solid $bright;
 	}
@@ -179,11 +200,10 @@ blockquote {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	align-items: center;
 	width: 100%;
 	
 	margin: 0 auto;
-	padding: 0 200px;
+	padding: 0 150px;
 
 	p {
 		margin: 0;
@@ -205,18 +225,18 @@ blockquote {
 	padding: 30px;
 }
 
-.portfolio-pieces__piece-img {
-	overflow: hidden;
-
-	img {
-		width: 100%;
-		display: block;
-	}
+.portfolio-pieces__piece-img img {
+	width: 100%;
+	display: block;
 }
 
 .portfolio-pieces__piece {
 	position: relative;
-	padding: 40px 0;
+	padding: 50px 0;
+
+	&:first-child {
+		padding-top: 0;
+	}
 
 	&::before {
 		content: '';
@@ -235,32 +255,28 @@ blockquote {
 	justify-content: space-around;
 	flex-wrap: wrap;
 	font-size: 18px;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
+	font-weight: bold;
 
 	ul {
 		width: 100%;
 	}
 
 	li {
-		margin: 0 10px;
+		margin: 10px;
 	}
 }
 
-.details {
-	position: relative;
-
-	p {
-		text-align: center;
-		padding: 15px 20px;
-		line-height: 28px;
-	}
+.details p {
+	text-align: center;
+	padding: 15px 20px;
+	line-height: 28px;
 }
 
 h3 {
 	letter-spacing: 2px;
 	font-size: 23px;
-	margin: 0;
-	margin-left: 20px;
+	margin: 0 0 0 20px;
 	transform: translateY(-50%);
 	padding: 5px 20px;
 	background: $black;
@@ -268,22 +284,22 @@ h3 {
 	color: $white;
 	text-transform: uppercase;
 	text-align: left;
-	position: relative;
 }
 
 .external {
 	color: $bright;
 	text-decoration: underline;
 	transition: all .2s ease;
-}
 
-.external:hover {
-	color: $hover;
+	&:hover {
+		color: $hover;
+	}
 }
 
 .portfolio-pieces__piece-link {
 	display: inline-block;
-	position: relative;
+	width: 140px;
+	text-align: center;
 	color: $white;
 	background: $bright;
 	padding: 10px 20px;
@@ -301,38 +317,39 @@ h3 {
 	}
 }
 
-.button-container {
-	padding: 60px 0 20px;
-	text-align: center;
+// .button-container {
+// 	padding: 60px 0 20px;
+// 	text-align: center;
 
-	button {
-		background: white;
-		border: none;
-		color: $bright;
-		text-transform: uppercase;
-		font-weight: bold;
-		letter-spacing: 2px;
-		font-size: 20px;
-		border: 2px solid $bright;
-		padding: 10px 15px;
-		transition: all .3s ease;
+// 	button {
+// 		background: white;
+// 		border: none;
+// 		color: $bright;
+// 		text-transform: uppercase;
+// 		font-weight: bold;
+// 		letter-spacing: 2px;
+// 		font-size: 20px;
+// 		border: 2px solid $bright;
+// 		padding: 10px 15px;
+// 		transition: all .3s ease;
 
-		&:hover {
-			color: $white;
-			background: $bright;
-		}
-	}
-}
+// 		&:hover {
+// 			color: $white;
+// 			background: $bright;
+// 		}
+// 	}
+// }
 
 footer {
 	position: relative;
 	background-color: $bg;
 	background-image: url('../assets/asanoha-400px.png');
-	padding: 50px;
+	padding: 40px;
 	text-align: center;
 
 	p {
 		margin: 0;
+		font-size: 14px;
 	}
 }
 
@@ -350,10 +367,25 @@ footer {
 
 .social {
 	padding: 20px 0 30px;
+	margin: 20px auto;
+
+	p {
+		letter-spacing: 1px;
+		font-size: 18px;
+		margin-bottom: 20px;
+		color: $accent;
+	}
+}
+
+.media {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 
 	a {
 		margin: 0 30px;
 		font-size: 25px;
+		line-height: 44px;
 		transition: all .3s ease;
 		color: $accent;
 
