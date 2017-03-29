@@ -91,8 +91,8 @@
 		transition: all .3s ease;
 	}
 
-	nav li {
-		margin: 30px 0;
+	nav li, .fa-times {
+		margin: 40px 0;
 	}
 
 	.main__landing {
@@ -127,5 +127,19 @@
 
 	.portfolio-pieces__piece-link {
 		margin: 20px 10px 0;
+	}
+
+	.footer-left, .footer-right {
+		width: 400px;
+		height: 400px;
+		// background-position: 100px 100px;
+	}
+
+	.footer-left {
+		background-position: -200px 195px;
+	}
+
+	.footer-right {
+		background-position: 200px 195px;
 	}
 }

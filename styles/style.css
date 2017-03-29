@@ -174,18 +174,39 @@ header {
   header .wrapper {
     height: 50%; }
 
-.logo {
+.decal {
   width: 600px;
   height: 600px;
   position: absolute;
   z-index: 1;
+  background: url("../../assets/floral.svg") no-repeat; }
+
+.footer-left, .footer-right {
+  bottom: 0; }
+
+.footer-left {
+  left: 0;
+  background-position: -300px 290px; }
+
+.footer-right {
+  right: 0;
+  background-position: 300px 290px; }
+
+.logo-left {
   top: 0;
   left: 0;
-  transform: translate(-50%, -52%); }
+  background-position: -300px -310px; }
+
+.logo-right {
+  bottom: 0;
+  right: 0;
+  background-position: 300px 290px; }
 
 .hidden-menu {
   display: none;
-  margin-top: 30px; }
+  margin-top: 30px;
+  position: relative;
+  z-index: 2; }
 
 .fa-times {
   display: none; }
@@ -212,7 +233,7 @@ nav ul {
       justify-content: flex-end; }
 
 nav li {
-  margin: 0 20px 0 100px;
+  margin: 0 20px 0 65px;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 2px; }
@@ -234,7 +255,7 @@ nav a::before {
   background: #FCD2C7;
   transition: all .3s ease; }
 
-nav a:hover {
+nav a:hover, nav a:focus {
   color: #E9B493; }
 
 nav a:hover::before {
@@ -249,7 +270,9 @@ nav a:hover::before {
   width: 60%;
   margin: 0 auto;
   padding: 50px 0;
-  background: rgba(255, 255, 255, 0.5); }
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../assets/black-and-white-apple-iphone-smartphone.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
   .main__landing::before {
     content: '';
     position: absolute;
@@ -281,6 +304,7 @@ footer {
 
 .tothetop {
   position: absolute;
+  z-index: 2;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
@@ -305,11 +329,29 @@ footer {
 .social {
   padding: 20px 0 30px;
   margin: 20px auto; }
-  .social p {
-    letter-spacing: 1px;
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #FCD2C7; }
+
+.email {
+  letter-spacing: 7px;
+  display: inline-block;
+  font-size: 22px;
+  margin: 20px 0 40px;
+  color: #FCD2C7;
+  position: relative; }
+  .email::before, .email::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px; }
+  .email::before {
+    top: -20px;
+    left: -40px;
+    border-top: 2px solid #E9B493;
+    border-left: 2px solid #E9B493; }
+  .email::after {
+    bottom: -20px;
+    right: -40px;
+    border-bottom: 2px solid #E9B493;
+    border-right: 2px solid #E9B493; }
 
 .media {
   display: -ms-flexbox;
@@ -317,10 +359,12 @@ footer {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+  position: relative;
+  z-index: 2; }
   .media a {
     margin: 0 30px;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 44px;
     transition: all .3s ease;
     color: #FCD2C7; }
@@ -343,6 +387,9 @@ footer {
     text-align: left; }
   .about p {
     line-height: 28px; }
+
+.originalpic, .minpic {
+  box-shadow: -5px 7px 30px #9F9797; }
 
 .originalpic {
   display: block;
@@ -419,8 +466,8 @@ blockquote {
   .portfolio-pieces__piece::before {
     content: '';
     position: absolute;
-    left: 10px;
-    right: 10px;
+    left: 0;
+    right: 0;
     height: 2px;
     bottom: 0;
     background: #9F9797; }
@@ -435,7 +482,23 @@ blockquote {
       flex-wrap: wrap;
   font-size: 18px;
   letter-spacing: 2px;
-  font-weight: bold; }
+  font-weight: bold;
+  position: relative; }
+  .portfolio-pieces__piece-skills::before, .portfolio-pieces__piece-skills::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px; }
+  .portfolio-pieces__piece-skills::before {
+    top: -10px;
+    left: 0;
+    border-top: 2px solid #7CB4C1;
+    border-left: 2px solid #7CB4C1; }
+  .portfolio-pieces__piece-skills::after {
+    bottom: -10px;
+    right: 0;
+    border-bottom: 2px solid #7CB4C1;
+    border-right: 2px solid #7CB4C1; }
   .portfolio-pieces__piece-skills ul {
     width: 100%; }
   .portfolio-pieces__piece-skills li {
@@ -482,6 +545,14 @@ h3 {
     background: #FFF;
     color: #7CB4C1;
     box-shadow: inset 0 0 0 2px #7CB4C1; }
+
+.github {
+  color: #7CB4C1;
+  background: #FFF;
+  box-shadow: inset 0 0 0 2px #7CB4C1; }
+  .github:hover {
+    background: #7CB4C1;
+    color: #FFF; }
 
 @media all and (max-width: 1080px) {
   .about__repertoire-list {
@@ -545,8 +616,8 @@ h3 {
     -ms-flex-align: center;
         align-items: center;
     transition: all .3s ease; }
-  nav li {
-    margin: 30px 0; }
+  nav li, .fa-times {
+    margin: 40px 0; }
   .main__landing {
     width: 100%; }
     .main__landing::before {
@@ -566,4 +637,11 @@ h3 {
     margin: 0 auto;
     text-align: center; }
   .portfolio-pieces__piece-link {
-    margin: 20px 10px 0; } }
+    margin: 20px 10px 0; }
+  .footer-left, .footer-right {
+    width: 400px;
+    height: 400px; }
+  .footer-left {
+    background-position: -200px 195px; }
+  .footer-right {
+    background-position: 200px 195px; } }

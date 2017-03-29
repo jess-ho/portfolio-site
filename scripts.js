@@ -53,8 +53,11 @@ $(function() {
 	$(window).on('resize', function() {
 		if ($(window).width() < 650) {
 			$('.hidden-menu').show()
+			$('nav ul').css('top', '-100%')
 		} else {
 			$('.hidden-menu').hide()
+			$('.fa-times').hide()
+			$('nav ul').removeClass('bg-overlay')
 		}
 	})
 
