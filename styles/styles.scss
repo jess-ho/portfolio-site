@@ -107,6 +107,8 @@ blockquote {
 
 .portfolio {
 	padding: 30px;
+	position: relative;
+	z-index: 2;
 }
 
 .portfolio-pieces__piece-img img {

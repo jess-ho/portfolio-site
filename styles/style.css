@@ -452,7 +452,9 @@ blockquote {
     margin: 45px 10px; }
 
 .portfolio {
-  padding: 30px; }
+  padding: 30px;
+  position: relative;
+  z-index: 2; }
 
 .portfolio-pieces__piece-img img {
   width: 100%;
