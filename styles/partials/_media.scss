@@ -78,12 +78,17 @@
 
 	.hidden-menu {
 		display: block;
+		margin-right: 60px;
+	}
+
+	nav {
+		justify-content: flex-end;
 	}
 
 	nav ul {
 		top: -100%;
 		height: 100%;
-		position: absolute;
+		position: fixed;
 		z-index: 3;
 		width: 100%;
 		flex-direction: column;

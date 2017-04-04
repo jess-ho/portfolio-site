@@ -167,40 +167,15 @@ h3 {
 
 header {
   height: 100vh;
-  background-color: #9F9797;
-  background-image: url("../assets/asanoha-400px.png");
+  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/coffee-work-desk-mug-keyboard-162616.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   color: #212121;
   position: relative; }
   header .wrapper {
     height: 50%; }
-
-.decal {
-  width: 600px;
-  height: 600px;
-  position: absolute;
-  z-index: 1;
-  background: url("../../assets/floral.svg") no-repeat; }
-
-.footer-left, .footer-right {
-  bottom: 0; }
-
-.footer-left {
-  left: 0;
-  background-position: -300px 290px; }
-
-.footer-right {
-  right: 0;
-  background-position: 300px 290px; }
-
-.logo-left {
-  top: 0;
-  left: 0;
-  background-position: -300px -310px; }
-
-.logo-right {
-  bottom: 0;
-  right: 0;
-  background-position: 300px 290px; }
 
 .hidden-menu {
   display: none;
@@ -269,10 +244,7 @@ nav a:hover::before {
   color: #113C49;
   width: 60%;
   margin: 0 auto;
-  padding: 50px 0;
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../../assets/black-and-white-apple-iphone-smartphone.jpg") no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
+  padding: 50px 0; }
   .main__landing::before {
     content: '';
     position: absolute;
@@ -294,8 +266,7 @@ h1 {
 
 footer {
   position: relative;
-  background-color: #9F9797;
-  background-image: url("../assets/asanoha-400px.png");
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 40px;
   text-align: center; }
   footer p {
@@ -389,7 +360,7 @@ footer {
     line-height: 28px; }
 
 .originalpic, .minpic {
-  box-shadow: -5px 7px 30px #9F9797; }
+  box-shadow: -5px 7px 30px rgba(0, 0, 0, 0.5); }
 
 .originalpic {
   display: block;
@@ -426,8 +397,7 @@ blockquote {
 .about__repertoire {
   margin-top: 50px;
   padding: 40px;
-  background-color: #9F9797;
-  background-image: url("../assets/asanoha-400px.png");
+  background: rgba(0, 0, 0, 0.5);
   color: #113C49; }
 
 .about__repertoire-list {
@@ -472,7 +442,7 @@ blockquote {
     right: 0;
     height: 2px;
     bottom: 0;
-    background: #9F9797; }
+    background: rgba(0, 0, 0, 0.5); }
 
 .portfolio-pieces__piece-skills {
   text-transform: uppercase;
@@ -606,11 +576,15 @@ h3 {
     bottom: 0;
     transform: translate(-50%, 60.5%); }
   .hidden-menu {
-    display: block; }
+    display: block;
+    margin-right: 60px; }
+  nav {
+    -ms-flex-pack: end;
+        justify-content: flex-end; }
   nav ul {
     top: -100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     z-index: 3;
     width: 100%;
     -ms-flex-direction: column;

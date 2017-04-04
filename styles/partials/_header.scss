@@ -1,47 +1,16 @@
 header {
 	height: 100vh;
 	background-color: $bg;
-	background-image: url('../assets/asanoha-400px.png');
+	background: linear-gradient($bg, $bg), url('../../assets/coffee-work-desk-mug-keyboard-162616.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 	color: $black;
 	position: relative;
 
 	.wrapper {
 		height: 50%;
 	}
-}
-
-.decal {
-	width: 600px;
-	height: 600px;
-	position: absolute;
-	z-index: 1;
-	background: url('../../assets/floral.svg') no-repeat;
-}
-
-.footer-left, .footer-right {
-	bottom: 0;
-}
-
-.footer-left {
-	left: 0;
-	background-position: -300px 290px;
-}
-
-.footer-right {
-	right: 0;
-	background-position: 300px 290px;
-}
-
-.logo-left {
-	top: 0;
-	left: 0;
-	background-position: -300px -310px;
-}
-
-.logo-right {
-	bottom: 0;
-	right: 0;
-	background-position: 300px 290px;
 }
 
 .hidden-menu {
@@ -120,9 +89,7 @@ nav a:hover::before {
 	width: 60%;
 	margin: 0 auto;
 	padding: 50px 0;
-	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('../../assets/black-and-white-apple-iphone-smartphone.jpg') no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
+	// background: rgba(255,255,255,0.6);
 
 	&::before {
 		content: '';
