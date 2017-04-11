@@ -6,6 +6,7 @@
 .about {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	text-align: left;
 	color: $font;
 	padding: 0 30px;
@@ -235,27 +236,27 @@ h3 {
 	}
 }
 
-// .button-container {
-// 	padding: 60px 0 20px;
-// 	text-align: center;
+.button-container {
+	padding: 60px 0 20px;
+	text-align: center;
 
-// 	button {
-// 		background: white;
-// 		border: none;
-// 		color: $bright;
-// 		text-transform: uppercase;
-// 		font-weight: bold;
-// 		letter-spacing: 2px;
-// 		font-size: 20px;
-// 		border: 2px solid $bright;
-// 		padding: 10px 15px;
-// 		transition: all .3s ease;
+	.resume-link {
+		background: white;
+		border: none;
+		color: $bright;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 2px;
+		font-size: 18px;
+		border: 2px solid $bright;
+		padding: 10px 15px;
+		transition: all .3s ease;
 
-// 		&:hover {
-// 			color: $white;
-// 			background: $bright;
-// 		}
-// 	}
-// }
+		&:hover {
+			color: $white;
+			background: $bright;
+		}
+	}
+}
 
 @import 'partials/media';
