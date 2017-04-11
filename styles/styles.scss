@@ -124,7 +124,7 @@ blockquote {
 		padding-top: 0;
 	}
 
-	&::before {
+	&:not(:last-child)::before {
 		content: '';
 		position: absolute;
 		left: 0;

@@ -167,8 +167,8 @@ h3 {
 
 header {
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/coffee-work-desk-mug-keyboard-162616.jpeg");
+  background-color: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/coffee-work-desk-mug-keyboard-162616.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -266,7 +266,7 @@ h1 {
 
 footer {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 40px;
   text-align: center; }
   footer p {
@@ -362,7 +362,7 @@ footer {
     line-height: 28px; }
 
 .originalpic, .minpic {
-  box-shadow: -5px 7px 30px rgba(0, 0, 0, 0.5); }
+  box-shadow: -5px 7px 30px rgba(0, 0, 0, 0.4); }
 
 .originalpic {
   display: block;
@@ -399,7 +399,7 @@ blockquote {
 .about__repertoire {
   margin-top: 50px;
   padding: 40px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
   color: #113C49; }
 
 .about__repertoire-list {
@@ -437,14 +437,14 @@ blockquote {
   padding: 50px 0; }
   .portfolio-pieces__piece:first-child {
     padding-top: 0; }
-  .portfolio-pieces__piece::before {
+  .portfolio-pieces__piece:not(:last-child)::before {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
     height: 2px;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); }
+    background: rgba(0, 0, 0, 0.4); }
 
 .portfolio-pieces__piece-skills {
   text-transform: uppercase;
