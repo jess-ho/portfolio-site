@@ -47,7 +47,7 @@
 	.about {
 		flex-direction: column-reverse;
 
-		div {
+		& > div {
 			width: 100%;
 		}
 	}

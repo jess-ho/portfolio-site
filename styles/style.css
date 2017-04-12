@@ -354,7 +354,7 @@ footer {
   padding: 0 30px;
   position: relative;
   z-index: 2; }
-  .about div {
+  .about > div {
     width: 45%; }
   .about h2 {
     text-align: left; }
@@ -395,6 +395,10 @@ blockquote {
 .jk {
   text-decoration: line-through;
   color: gray; }
+
+.inner-wrapper {
+  width: 90%;
+  margin: 0 auto; }
 
 .about__repertoire {
   margin-top: 50px;
@@ -529,9 +533,10 @@ h3 {
     color: #FFF; }
 
 .button-container {
-  padding: 60px 0 20px;
+  padding: 0 0 20px;
   text-align: center; }
   .button-container .resume-link {
+    display: inline-block;
     background: white;
     border: none;
     color: #7CB4C1;
@@ -579,7 +584,7 @@ h3 {
   .about {
     -ms-flex-direction: column-reverse;
         flex-direction: column-reverse; }
-    .about div {
+    .about > div {
       width: 100%; }
   .originalpic {
     display: none; }

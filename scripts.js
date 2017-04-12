@@ -6,7 +6,7 @@ $(function() {
 			if (target.length) {
 				$('html, body').animate({
 			 	scrollTop: target.offset().top
-				}, 1000)
+				}, 800)
 				return false
 			}
 		}
@@ -15,25 +15,25 @@ $(function() {
 	$('#about-link').on('click', function() {
 		$('html, body').animate({
 		 	scrollTop: $('#about').offset().top
-		}, 1000)
+		}, 900)
 	})
 
 	$('#portfolio-link').on('click', function() {
 		$('html, body').animate({
 		 	scrollTop: $('#portfolio').offset().top
-		}, 1000)
+		}, 900)
 	})
 
 	$('#contact-link').on('click', function() {
 		$('html, body').animate({
 		 	scrollTop: $('#contact').offset().top
-		}, 1000)
+		}, 900)
 	})
 
 	$('.tothetop a').on('click', function() {
 		$('html, body').animate({
 		 	scrollTop: $('#top').offset().top
-		}, 1000)
+		}, 900)
 	})
 
 	//
@@ -41,10 +41,14 @@ $(function() {
 	$('.hidden-menu i').on('click', function() {
 		$('nav ul').css('top', '0').addClass('bg-overlay')
 		$('.hidden-menu').fadeOut()
+		$('#about-link, #portfolio-link, #contact-link').on('click', function() {
+			$('nav ul').css('top', '-100%').removeClass('bg-overlay')
+			$('.hidden-menu').fadeIn()
+		})
 		$('.fa-times').fadeIn()
 	})
 
-	$('.fa-times').on('click', function() {
+	$('ul .fa-times').on('click', function() {
 		$('.hidden-menu').fadeIn()
 		$('nav ul').css('top', '-100%').removeClass('bg-overlay')
 		$('.fa-times').fadeOut()
