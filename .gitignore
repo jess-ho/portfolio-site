@@ -3,3 +3,6 @@ JessHo_Portfolio.zip
 assets/floral.svg
 # Local Netlify folder
 .netlify
+# Build
+.nuxt
+public
