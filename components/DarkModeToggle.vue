@@ -30,7 +30,7 @@
 			}
 		},
 		mounted() {
-			if (this.$colorMode.value === 'dark') {
+			if (this.$colorMode.value === 'dark' || document.documentElement.classList.contains('dark')) {
 				this.darkMode = true;
 			}
 		}

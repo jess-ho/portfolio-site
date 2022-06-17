@@ -6,7 +6,8 @@ module.exports = {
 	],
 	theme: {
 		container: {
-			center: true
+			center: true,
+			padding: '4rem'
 		},
 		colors: {
 			'green-100': '#87C29E',
