@@ -6,3 +6,4 @@ assets/floral.svg
 # Build
 .nuxt
 public
+package*.json
