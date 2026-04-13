@@ -1,5 +1,12 @@
-node_modules
 JessHo_Portfolio.zip
 assets/floral.svg
+
+node_modules/
+dist/
+
 # Local Netlify folder
-.netlify
+.netlify/
+# Astro-specific
+.astro/
+
+.DS_Store
